@@ -9,9 +9,6 @@ links to the scripts used.
 
 ## Results for image classification
 
-TODO: talk about ResNet V1 and V1.5 list accuracy numbers for the model
-talk about fast.ai approach.  
-
 ResNet-50
 ([arXiv:1512.03385](https://arxiv.org/abs/1512.03385))
 was tested using the [ImageNet](http://www.image-net.org/) data set. Tests were

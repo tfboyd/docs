@@ -24,7 +24,7 @@ Testing with synthetic data was done by using a `tf.Variable` set to the same
 shape as the data expected by the model. The `tf.Variable` is 
 placed directly on the device avoiding a host to device copy.
 
-### Training with NVIDIA® DGX-1™ (NVIDIA® Tesla® V100)
+### Training with NVIDIA® DGX-1™ (NVIDIA® Tesla® V100SMX2)
 
 <div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
   <img style="width:80%" src="../images/perf_summary_p100_single_server.png">
@@ -60,7 +60,7 @@ K80)](#details_for_amazon_ec2_nvidia_tesla_k80) sections.
 Talk about FP32 and FP16 and show some graphs as well as what hardware benefits the change.
 
 
-## Details for NVIDIA® DGX-1™ (NVIDIA® Tesla® V100)
+## Details for NVIDIA® DGX-1™ (NVIDIA® Tesla® V100SMX2)
 
 ### Environment
 
@@ -89,11 +89,6 @@ Put the commands here.
 
 <div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
   <img style="width:80%" src="../images/perf_summary_p100_single_server.png">
-</div>
-
-<div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
-  <img style="width:35%" src="../images/perf_dgx1_synth_p100_single_server_scaling.png">
-  <img style="width:35%" src="../images/perf_dgx1_real_p100_single_server_scaling.png">
 </div>
 
 **Training real data**
@@ -145,11 +140,6 @@ Put the commands here.
   <img style="width:80%" src="../images/perf_summary_p100_single_server.png">
 </div>
 
-<div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
-  <img style="width:35%" src="../images/perf_dgx1_synth_p100_single_server_scaling.png">
-  <img style="width:35%" src="../images/perf_dgx1_real_p100_single_server_scaling.png">
-</div>
-
 **Training real data**
 
 GPUs | ResNet-50 v1 | ResNet-50 v1.5 | Trivial  
@@ -168,7 +158,7 @@ GPUs | ResNet-50 v1 | ResNet-50 v1.5
 4    | 569          | 852                   
 8    | 1131         | 1734  
 
-## Details for Google Cloud (NVIDIA® Tesla® V100)
+## Details for Google Cloud (NVIDIA® Tesla® V100SMX2)
 
 ### Environment
 
@@ -247,12 +237,6 @@ Put the commands here.
 ```
 
 ### Results
-
-<div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
-  <img style="width:35%" src="../images/perf_aws_synth_k80_single_server_scaling.png">
-  <img style="width:35%" src="../images/perf_aws_real_k80_single_server_scaling.png">
-</div>
-
 
 **Training real data**
 

@@ -277,7 +277,8 @@ GPUs | ResNet-50 v1
 
 This
 [script](https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks)
-was run on the various platforms to generate the above results.
+was run on the various platforms to generate the above results.  Check each test for the
+exact hash point that was used.
 
 In order to create results that are as repeatable as possible, each test was run
 5 times and then the times were averaged together. GPUs are run in their default
@@ -285,3 +286,8 @@ state on the given platform. For NVIDIA® Tesla® K80 this means leaving on [GPU
 Boost](https://devblogs.nvidia.com/parallelforall/increase-performance-gpu-boost-k80-autoboost/).
 For each test, 10 warmup steps are done and then the next 100 steps are
 averaged.
+
+Both Google Cloud and Amazon's AWS offer Deep Learning VMs with TensorFlow compiled
+with flags optimized for their systems and at times newer versions of NVIDIA libraries.
+For consistency the benchmarks are run via Docker using TensorFlow's official Docker
+images.

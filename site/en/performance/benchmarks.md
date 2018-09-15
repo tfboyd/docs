@@ -17,12 +17,33 @@ ResNet-50
 was tested using the [ImageNet](http://www.image-net.org/) data set. Tests were
 run on Google Compute Engine, Amazon Elastic Compute Cloud (Amazon EC2), and an
 NVIDIA® DGX-1™. Most of the tests were run with both real data and symthetic data.
-Real data represents the experience doing real work.  Synthetic data is useful
+Real data represents the experience doing real work. Synthetic data is useful
 for quick tests to verify hardware without having to downloaded and prepare a
-dataset as well a useful test to eliminate disk I/O as a variable and to set a baseline.
+dataset as well as to eliminate disk I/O as a variable and to set a baseline.
 Testing with synthetic data was done by using a `tf.Variable` set to the same
 shape as the data expected by the model. The `tf.Variable` is 
 placed directly on the device avoiding a host to device copy.
+
+For most of the tests below we executed both ResNetV1 and ResNetV1.5.
+ResNetV1 has been the historical benchmark for the past few years. In the past
+year a varient of V1 has been come popular but not named where the first conv 3x3
+stride something something is different. The MLPerf group is calling this
+variant V1.5.  V1.5 whie often just refered to as ResNet has become the most
+popular variant.  V1.5 is more stable at higher batch sizes and trains to a higher
+accuracy than the original V1 given the same number of epochs. For a detailed
+break down of V1 vs. V1.5 see the section blah blah.
+
+Total training time can be reduced by reducing the by reducing the number
+of epochs by adjusting hyperparameters or utilizing new techniques. These benchmarks
+are about providing information about the behavior of TensorFlow on various hardware
+platforms keeping the code consistent.
+
+Accuracy of models tested
+INESRT TABLE  81 epochs ResNet50V1.5  90 ResNetV1 and 90 ResNetV1.5   FP16 and FP32 
+talk about V1 ranging if we want because it does top_1 and top_5 results desired 
+just on one platform not sharing total time as that is a distraction.
+
+
 
 ### Training with NVIDIA® DGX-1™ (NVIDIA® Tesla® V100SMX2)
 
@@ -59,6 +80,7 @@ K80)](#details_for_amazon_ec2_nvidia_tesla_k80) sections.
 ### FP32 vs FP16 (mixed-precision)
 Talk about FP32 and FP16 and show some graphs as well as what hardware benefits the change.
 
+### ResNetV1 vs ResNetV1.5
 
 ## Details for NVIDIA® DGX-1™ (NVIDIA® Tesla® V100SMX2)
 
